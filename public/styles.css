@@ -1,0 +1,172 @@
+/* General Styling */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f7f7f7;
+  color: #333;
+}
+
+h1 {
+  text-align: center;
+  padding: 30px;
+  background-color: #4CAF50;
+  color: white;
+  border-radius: 10px;
+  font-size: 36px;
+}
+
+.container {
+  width: 80%;
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 30px;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Input Styling */
+#cityInput {
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+/* Dropdown Styling */
+.dropdown {
+  position: relative;
+  width: 100%;
+}
+
+.dropdown-list {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  max-height: 150px;
+  overflow-y: auto;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: white;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+}
+
+.dropdown-item {
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.dropdown-item:hover {
+  background-color: #e0e0e0;
+}
+
+/* Button Styling */
+#getWeather {
+  width: 100%;
+  padding: 15px;
+  background: linear-gradient(135deg, #6dd5ed, #2193b0);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out, background-color 0.3s;
+}
+
+#getWeather:hover {
+  background-color: #45a049;
+  transform: scale(1.05);
+}
+
+
+/* Weather Data Styling */
+#weatherData {
+  margin-top: 20px;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  display: grid;             /* Ensure a grid layout for child elements */
+  grid-template-columns: 1fr 1fr; /* Define equal column widths */
+  gap: 15px;                 /* Add spacing between elements */
+}
+
+.weather-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.weather-item:hover {
+  transform: scale(1.03);
+}
+
+#suggestions {
+  display: none; /* Initially hidden */
+  position: absolute; /* Position it below the input field */
+  width: 100%; /* Match the width of the input field */
+  max-width: 300px; /* Prevent infinite stretching */
+  border: 1px solid #ccc; /* Add borders */
+  border-radius: 5px;
+  background-color: #fff; /* White background for dropdown */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1); /* Shadow for better visibility */
+  z-index: 1000; /* Ensure it appears above other elements */
+}
+
+#suggestions div {
+  padding: 10px;
+  cursor: pointer;
+  border-bottom: 1px solid #f0f0f0; /* Separate items */
+}
+
+#suggestions div:hover {
+  background-color: #f9f9f9; /* Highlight on hover */
+}
+
+#suggestions div:last-child {
+  border-bottom: none; /* Remove border for the last item */
+}
+/* Responsiveness */
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+    padding: 20px;
+  }
+
+  #weatherData {
+    grid-template-columns: 1fr;
+  }
+
+  #getWeather {
+    font-size: 16px;
+  }
+
+  .weather-item {
+    padding: 12px;
+  }
+}
+
+#location {
+  font-size: 1rem;           /* Adjust font size to fit content */
+  word-wrap: break-word;     /* Break long words to prevent overflow */
+  white-space: normal;       /* Allow text to wrap to the next line */
+  max-width: 100%;           /* Restrict the width of the container */
+  padding: 10px;             /* Add padding for better spacing */
+  box-sizing: border-box;    /* Include padding in element's width/height */
+  text-align: center;        /* Center align the text */
+}

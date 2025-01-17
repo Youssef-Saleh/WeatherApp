@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather App</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css"> <!-- Link to external CSS file -->
+</head>
+
+<body>
+  <h1>Weather Application</h1>
+  <div id="loading" style="display:none;">
+    <img src="https://i.gifer.com/YCZH.gif" alt="loading spinner" />
+  </div>
+  <div class="container">
+    <input type="text" id="cityInput" placeholder="Enter city name" autocomplete="off" />
+    <div class="dropdown">
+      <ul id="suggestions" class="dropdown-list">
+      </ul>
+    </div>
+    <button id="getWeather">Get Weather</button>
+    
+    <div id="weatherData" style="display:none;">
+        <h3>Weather Information</h3>
+        <div class="weather-item">
+          <span>Location:</span><span id="location"></span>
+        </div>
+        <div class="weather-item">
+          <span>Temperature:</span>
+          <span class="value-unit">
+            <span id="temp" class="value"></span><span class="unit">°C</span>
+          </span>
+        </div>
+        <div class="weather-item">
+          <span>Condition:</span><span id="condition"></span>
+        </div>
+        <div class="weather-item">
+          <span>Humidity:</span>
+          <span class="value-unit">
+            <span id="humidity" class="value"></span><span class="unit">%</span>
+          </span>
+        </div>
+        <div class="weather-item">
+          <span>Wind Speed:</span>
+          <span class="value-unit">
+            <span id="wind_speed" class="value"></span><span class="unit">km/h</span>
+          </span>
+        </div>
+      </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
